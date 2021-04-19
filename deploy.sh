@@ -10,7 +10,7 @@ docker push kyruel/multi-client-k8s:$SHA
 docker push kyruel/multi-server-k8s-pgfix:$SHA
 docker push kyruel/multi-worker-k8s:$SHA
 
-kubectl apply -f k8s
+kubectl apply -f simplek8s
 kubectl set image deployments/server-deployment server=kyruel/multi-server-k8s-pgfix:$SHA
 kubectl set image deployments/client-deployment client=kyruel/multi-client-k8s:$SHA
 kubectl set image deployments/worker-deployment worker=kyruel/multi-worker-k8s:$SHA
