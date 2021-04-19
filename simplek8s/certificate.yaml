@@ -2,13 +2,13 @@ apiVersion: cert-manager.io/v1
 
 kind: Certificate
 metadata:
-  name: yourdomain-com-tls
+  name: winklerit-com-tls
 spec:
-  secretName: yourdomain-com
+  secretName: winklerit-com
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: yourdomain.com
+  commonName: winklerit.com
   dnsNames:
-    - yourdomain.com
-    - www.yourdomain.com
+    - winklerit.com
+    - www.winklerit.com
